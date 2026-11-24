@@ -149,8 +149,18 @@ p{margin:0}
 .hero-stats strong{font-size:1.55rem;font-weight:800;color:var(--gold)}
 .hero-stats span{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
 
-/* phone mockup */
+/* profile photo + phone mockup */
 .hero-visual{position:relative;display:flex;justify-content:center}
+
+.profile-photo{
+  position:absolute;z-index:5;top:-8%;left:-7%;
+  width:126px;height:126px;padding:4px;border-radius:50%;
+  border:2px solid var(--gold);
+  background:linear-gradient(160deg,var(--surface-2),var(--surface));
+  box-shadow:0 20px 45px -18px rgba(0,0,0,.95),0 0 0 7px rgba(212,175,55,.1);
+}
+.profile-photo img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 22%}
+
 .phone{
   position:relative;width:min(290px,80%);
   border-radius:38px;padding:9px;
@@ -264,6 +274,8 @@ p{margin:0}
 .tl-body h3{font-size:1.15rem;margin-bottom:.3rem}
 .tl-body h3 span{font-weight:500;color:var(--muted);font-size:.95rem}
 .tl-org{color:var(--gold-soft);font-weight:600;font-size:.9rem;margin-bottom:.5rem}
+.edu-link{color:var(--gold-soft);text-decoration:underline;text-decoration-color:rgba(212,175,55,.35);text-underline-offset:3px;transition:color .2s,text-decoration-color .2s}
+.edu-link:hover{color:var(--gold);text-decoration-color:var(--gold)}
 .tl-body p{color:var(--muted);font-size:.95rem;max-width:62ch}
 
 /* ---------------- EDUCATION ---------------- */
@@ -313,6 +325,7 @@ a.contact-item:hover{border-color:var(--line);background:var(--surface-2);transf
 @media (max-width:940px){
   .hero-grid{grid-template-columns:1fr;gap:3rem}
   .hero-visual{order:-1}
+  .profile-photo{width:104px;height:104px;top:-3%;left:4%}
   .phone{width:min(240px,64%)}
   .float-card{left:auto;right:0;bottom:4%}
   .about-grid{grid-template-columns:1fr;gap:1.6rem}
